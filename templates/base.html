@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            vw_D10
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mr-auto" style="background-color: #e3f2fd;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'cars_list_url' %}">Cars</a>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
+        <form class="form-inline my-2 my-lg-0" action="{% url 'cars_list_url' %}">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+<!--    <div class="container mt-3">-->
+<!--        <div class="row">-->
+<!--            <div class="col-10 offset-md-1">-->
+<!--                <form class="form-inline my-2 my-lg-0" action="{% url 'cars_list_url' %}" method="get" aria-label="M_Search" name="m_search">-->
+
+<!--                    <div class="form-group">-->
+<!--                        Марка: {{ form.mark }}-->
+<!--                        Модель: {{ form.model }}-->
+<!--                        Год: {{ form.year }}-->
+<!--                        КПП: {{ form.gear }}-->
+<!--                        Цвет: {{ form.color }}-->
+<!--                    </div>-->
+<!--                    <button type="submit" class="btn btn-outline-success">Search</button>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                <form class="form-inline my-1 my-lg-1" action="{% url 'cars_list_url' %}" method="get" aria-label="N_Search" name="n_search">
+
+                    <div class="form-group">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Марка: " aria-label="Марка: " name="mark">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Модель: " aria-label="Модель: " name="model">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Год: " aria-label="Год: " name="year">
+                        <input class="form-control mr-sm-2" type="search" placeholder="КПП: " aria-label="КПП: " name="gear">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Цвет: " aria-label="Цвет: " name="color">
+                        <button type="submit" class="btn btn-outline-success">Search</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-6 offset-md-2">
+                {% block content %}
+                    Some content ...
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

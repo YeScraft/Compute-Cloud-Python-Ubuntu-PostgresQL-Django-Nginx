@@ -1,0 +1,23 @@
+{% extends 'catalog/index.html' %}
+
+{% block title %}
+    Cars_list
+{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">{{ message }}</h1>
+    {% for car in cars %}
+        <div class="card mb-4" style="width: 18rem;">
+          <div class="card-header">
+              Марка: {{ car.mark }}
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Модель: {{ car.model }}</li>
+            <li class="list-group-item">Год выпуска: {{ car.year }}</li>
+            <li class="list-group-item">Коробка передач: {{ car.get_gear_display }}</li>
+            <li class="list-group-item">Цвет: {{ car.color }}</li>
+          </ul>
+        </div>
+    {% endfor %}
+
+{% endblock %}
