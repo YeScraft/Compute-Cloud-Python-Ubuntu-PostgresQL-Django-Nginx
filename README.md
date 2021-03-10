@@ -1,4 +1,4 @@
-# YeSergey - E5.10 (Развёртывание проекта на Виртуальной машине Python, Ubuntu, PostgresQL, Django, Nginx)
+# YeSergey - E5.10 (Развёртывание проекта на Виртуальной машине - Compute Cloud, Python, Ubuntu, PostgresQL, Django, Nginx)
 1. По адресу: http://84.201.143.66/catalog/ - сам каталог машин (ВМ остановлена, т.к. сервис платный);
 2. По адресу: http://84.201.143.66/admin/ - дажго админка (ВМ остановлена, т.к. сервис платный);
 3. Создан суперюзер: с логином pws_admin и паролем sf_password.
